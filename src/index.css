@@ -1,0 +1,220 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;700&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+/*   font-family: 'Belanosima', sans-serif; */
+
+:root {
+  font-family: 'Hind Siliguri', sans-serif;
+  /* MAIN SECTION COLORS */
+  --main-bg: #0f0e17;
+  --main-headline: #fffffe;
+  --main-paragraph: #a7a9be;
+  --main-btn: #ff8906;
+  --main-btn-light: #fde4bf;
+  --main-btn-txt: #fffffe;
+  /* SUB SECTION COLORS */
+  --sub-bg: #fffffe;
+  --sub-headline: #0f0e17;
+  --sub-sub-headline: #2e2f3e;
+  /* SUB SECTION CARD COLORS */
+  --sub-card-bg: #0f0e17;
+  --sub-card-heading: #fffffe;
+  --sub-card-paragraph: #a7a9be;
+}
+
+body {
+  background-color: var(--main-bg);
+}
+
+/* HEADER.JSX */
+.nav-brand,
+.nav-links {
+  cursor: pointer;
+  color: var(--main-headline);
+
+  transition: 0.5s ease all;
+}
+
+.nav-brand {
+  font-family: 'Belanosima', sans-serif;
+  font-weight: 700;
+}
+
+.nav-brand:hover,
+.nav-links:hover {
+  color: var(--main-btn);
+}
+
+/* HOMEPAGE.JSX */
+
+/* HERO SECTION */
+.hero {
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(15, 14, 23, 0.75), rgba(15, 14, 23, 0.75)), url('./assets/jordans.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-section h1 {
+  font-family: 'Belanosima', sans-serif;
+  font-weight: 700;
+  color: var(--main-headline);
+}
+
+.hero-section span {
+  color: var(--main-btn);
+  font-weight: 700;
+}
+
+.hero-section p {
+  color: var(--main-paragraph);
+  font-weight: 700;
+}
+
+.hero-btn {
+  background-color: var(--main-btn);
+  color: var(--main-btn-txt);
+  font-weight: 600;
+  transition: 0.25s ease-in-out;
+}
+
+.hero-btn:hover {
+  background-color: var(--main-btn-light);
+}
+
+
+/* SERVICES SECTION */
+.services {
+  min-height: 30vh;
+}
+
+.services-card {
+  background: none;
+  border: none;
+}
+
+.services-card h3 {
+  color: var(--main-headline);
+}
+
+.services-card a {
+  color: var(--main-btn);
+}
+
+.services-card a:hover {
+  color: var(--main-headline);
+}
+
+.services-card p {
+  color: var(--main-paragraph);
+}
+
+svg {
+  fill: var(--sub-bg);
+}
+
+/* SPONSORS SECTION */
+.sponsors {
+  min-height: 20vh;
+  background-color: var(--sub-bg);
+}
+
+.sponsors h1 {
+  font-family: 'Belanosima', sans-serif;
+  font-weight: 700;
+  color: var(--sub-headline);
+}
+
+.sponsor-card {
+  background-color: var(--main-bg);
+  border: none;
+  box-shadow: 0px 2px 4px var(--main-bg);
+}
+
+.featured-logo {
+  fill: var(--sub-bg);
+}
+
+/* PROMOTIONS SECTION */
+.promo {
+  min-height: 100vh;
+  background-color: var(--sub-bg);
+}
+
+.promo-card {
+  background-color: var(--sub-card-bg);
+  border: none;
+}
+
+.promo h1 {
+  font-family: 'Belanosima', sans-serif;
+  font-weight: 700;
+  color: var(--main-bg);
+}
+
+.promo h3 {
+  font-weight: 600;
+  color: var(--sub-card-heading);
+}
+
+.promo p {
+  color: var(--sub-card-paragraph);
+}
+
+img {
+  border-radius: 5px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 30vw;
+  object-fit: cover;
+}
+
+ /* FOOTER SECTION */
+.footer {
+  background-image: linear-gradient(to bottom, rgba(15, 14, 23, 0.75), rgba(15, 14, 23, 0.75)), url('./assets/jordans.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+ .footer-card {
+  background: url('./assets/footer-card-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 2px 4px var(--main-bg);
+ }
+
+ .footer-card h1 {
+    font-weight: 700;
+    color: var(--main-bg);
+ }
+
+ .footer-card p {
+  font-weight: 600;
+  color: var(--main-bg);
+}
+
+
+ .footer-card a {
+  color: #0f0e17;
+  font-weight: 600;
+ }
+
+ .footer-card a:hover {
+  color: var(--main-btn);
+ }
+
+ @media only screen and (max-width: 992px) {
+  .footer-container {
+    flex-direction: column;
+  }
+  .social-links-footer {
+    flex-direction: column;
+  }
+}
