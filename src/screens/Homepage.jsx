@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 // components
 import { Header } from "./components/Header";
@@ -6,14 +6,24 @@ import { Footer } from "./components/Footer";
 // images
 import NikeClip from "../assets/nike-clip.png";
 import DesignClip from "../assets/design-clip.png";
-
+import JordanImg from '../assets/jordans-item.png';
 
 export const Homepage = () => {
+
+  const [product, setProduct] = useState(
+    {
+      name: "Jordan 1s - High",
+      color: "1 Colour",
+      price: 160,
+      imgUrl: JordanImg,
+    },
+  );
 
   // navigation
   const navigate = useNavigate();
   const toSneakers = () => navigate('/sneakers');
   const toDesigner = () => navigate('/designer');
+  const toProduct = (data) => navigate('/product', { state: { data } });
 
   return (
     <section className="homepage">
@@ -27,7 +37,7 @@ export const Homepage = () => {
             <p className="fs-3">
               <span>REINVENTING</span> RUNNING EXPERIENCE.
             </p>
-            <button className="btn hero-btn">Order Now</button>
+            <button className="btn hero-btn" onClick={() => toProduct(product)}>Order Now</button>
           </div>
         </div>
       </div>
