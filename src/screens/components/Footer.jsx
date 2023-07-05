@@ -1,6 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Footer = () => {
+
+  // navigate
+  const navigate = useNavigate();
+  const toSneakers = () => navigate('/sneakers');
+
   return (
     <div className="footer">
       <div className="d-flex justify-content-evenly align-items-center">
@@ -13,7 +19,7 @@ export const Footer = () => {
                   <p className="fs-4">
                     Mixing comfort with latest fashion.
                   </p>
-                  <button className="btn hero-btn">Browse</button>
+                  <button className="btn hero-btn" onClick={toSneakers}>Browse</button>
                 </div>
               </div>
 
