@@ -290,6 +290,12 @@ img {
   color: var(--main-btn);
 }
 
+@media only screen and (max-width: 900px) {
+  .product-showcase {
+    flex-direction: column;
+  }
+}
+
 /* CART */
 .cart {
   min-height: 30vh;

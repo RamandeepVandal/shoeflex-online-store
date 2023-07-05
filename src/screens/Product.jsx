@@ -35,7 +35,7 @@ export const Product = () => {
 
         <div className="d-flex flex-column justify-content-center align-items-center">
           <h1 className="display-1 product-page-title">Your <span className="product-page-title-accent">Product</span></h1>
-          <div className="d-flex flex-row justify-content-between align-items-center">
+          <div className="d-flex product-showcase justify-content-between align-items-center p-1 mb-5">
             <img src={location?.state?.data?.imgUrl} alt="shoe" />
             <div className="product-item ">
               <h1 className="fs-3">{location?.state?.data?.name}</h1>
