@@ -18,10 +18,6 @@ ShoeFlex is a front-end e-commerce shoe store application that allows users to b
 3. In the server direcotry, run **npm start** to start the server and connection to the db.
 4. Open a second terminal and in the root directory, run **npm run dev** to start the application.
 
-## Video Demo
-
-![ShoeFlex](assets/ShoeFlex.mp4)
-
 ## Usage
 
 - Browse the shoe catalog: On the home page, you will see a list of available shoes. Scroll through the catalog to find the shoes you're interested in.
