@@ -15,7 +15,7 @@ ShoeFlex is a front-end e-commerce shoe store application that allows users to b
 1. In the root directory, run **npm install**.
 2. Now in the server directory (cd server), run **npm install**.
 4. In the server directory, navigate to config and add your MongoDB connection uri in the db.js file. 
-3. In the server direcotry, run **npm start** to start the server and connection to the db.
+3. In the server directory, run **npm start** to start the server and connection to the db.
 4. Open a second terminal and in the root directory, run **npm run dev** to start the application.
 
 ## Usage
