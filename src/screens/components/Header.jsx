@@ -1,3 +1,4 @@
+import React from 'react';
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -7,7 +8,8 @@ export const Header = () => {
   // navigation
   const navigate = useNavigate();
   const routeHome = () => navigate("/");
-  const routeProducts = () => navigate("/products");
+  const routeSneaker = () => navigate("/sneakers");
+  const routeDesigner = () => navigate("/designer");
   const routeCart = () => navigate("/cart");
 
   return (
@@ -19,8 +21,11 @@ export const Header = () => {
         <Navbar.Toggle aria-controls="navbar-responsive" />
         <Navbar.Collapse id="navbar-responsive">
           <Nav className="ms-auto d-flex align-items-center">
-            <Nav.Link className="me-3 fs-4 nav-links" onClick={routeProducts}>
-              Products
+            <Nav.Link className="me-3 fs-4 nav-links" onClick={routeSneaker}>
+              Sneakers
+            </Nav.Link>
+            <Nav.Link className="me-3 fs-4 nav-links" onClick={routeDesigner}>
+              Designer
             </Nav.Link>
             <Nav.Link className="me-3 fs-4 nav-links" onClick={routeCart}>
               <svg

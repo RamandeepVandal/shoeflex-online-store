@@ -1,11 +1,20 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+// components
 import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 // images
 import NikeClip from "../assets/nike-clip.png";
 import DesignClip from "../assets/design-clip.png";
-import { Footer } from "./components/Footer";
+
 
 export const Homepage = () => {
+
+  // navigation
+  const navigate = useNavigate();
+  const toSneakers = () => navigate('/sneakers');
+  const toDesigner = () => navigate('/designer');
+
   return (
     <section className="homepage">
       {/* HERO SECTION */}
@@ -152,9 +161,9 @@ export const Homepage = () => {
                     <div className="p-3 text-center">
                       <h3 className="fs-1">Sneakers</h3>
                       <p className="fs-3">
-                        <span>Brands:</span> Nike, Adidas, Jordans
+                      <span>REINVENTING</span> RUNNING EXPERIENCE
                       </p>
-                      <button className="btn hero-btn fs-4">
+                      <button className="btn hero-btn fs-4" onClick={toSneakers}>
                         Browse Sneakers
                       </button>
                     </div>
@@ -170,9 +179,9 @@ export const Homepage = () => {
                     <div className="p-3 text-center">
                       <h3 className="fs-1">Designer</h3>
                       <p className="fs-3">
-                        <span>Brands:</span> Gucci, Balenciaga, Dior
+                      <span>DESIGNED</span> WITH PERFECTION
                       </p>
-                      <button className="btn hero-btn fs-4">
+                      <button className="btn hero-btn fs-4" onClick={toDesigner}>
                         Browse Designer
                       </button>
                     </div>

@@ -18,6 +18,7 @@
   --sub-sub-headline: #2e2f3e;
   /* SUB SECTION CARD COLORS */
   --sub-card-bg: #0f0e17;
+  --sub-card-bg-light: #222034;
   --sub-card-heading: #fffffe;
   --sub-card-paragraph: #a7a9be;
 }
@@ -45,9 +46,7 @@ body {
   color: var(--main-btn);
 }
 
-/* HOMEPAGE.JSX */
-
-/* HERO SECTION */
+/* HERO SECTIONS */
 .hero {
   min-height: 100vh;
   background-image: linear-gradient(to bottom, rgba(15, 14, 23, 0.75), rgba(15, 14, 23, 0.75)), url('./assets/jordans.jpg');
@@ -77,7 +76,7 @@ body {
   background-color: var(--main-btn);
   color: var(--main-btn-txt);
   font-weight: 600;
-  transition: 0.25s ease-in-out;
+  transition: 0.5s ease all;
 }
 
 .hero-btn:hover {
@@ -143,6 +142,10 @@ svg {
   background-color: var(--sub-bg);
 }
 
+.promo span {
+  color: var(--main-btn);
+}
+
 .promo-card {
   background-color: var(--sub-card-bg);
   border: none;
@@ -173,7 +176,7 @@ img {
   object-fit: cover;
 }
 
- /* FOOTER SECTION */
+/* FOOTER SECTION */
 .footer {
   background-image: linear-gradient(to bottom, rgba(15, 14, 23, 0.75), rgba(15, 14, 23, 0.75)), url('./assets/jordans.jpg');
   background-repeat: no-repeat;
@@ -182,39 +185,127 @@ img {
   background-attachment: fixed;
 }
 
- .footer-card {
+.footer-card {
   background: url('./assets/footer-card-bg.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: 0px 2px 4px var(--main-bg);
- }
+}
 
- .footer-card h1 {
-    font-weight: 700;
-    color: var(--main-bg);
- }
+.footer-card h1 {
+  font-weight: 700;
+  color: var(--main-bg);
+}
 
- .footer-card p {
+.footer-card p {
   font-weight: 600;
   color: var(--main-bg);
 }
 
 
- .footer-card a {
+.footer-card a {
   color: #0f0e17;
   font-weight: 600;
- }
+}
 
- .footer-card a:hover {
+.footer-card a:hover {
   color: var(--main-btn);
- }
+}
 
- @media only screen and (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   .footer-container {
     flex-direction: column;
   }
+
   .social-links-footer {
     flex-direction: column;
   }
 }
+
+/* SNEAKER & DESIGNER*/
+
+/* HERO SECTION */
+.products-hero {
+  min-height: 30vh;
+  background-image: linear-gradient(to bottom, rgba(15, 14, 23, 0.75), rgba(15, 14, 23, 0.75)), url('./assets/jordans.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* PRODUCTS SECTION */
+.products {
+  min-height: 100vh;
+  background-color: var(--sub-bg);
+}
+
+.product-card {
+  cursor: pointer;
+
+  transition: 0.5s ease all;
+}
+
+.product-card:hover {
+  background-color: var(--sub-card-bg-light);
+}
+
+.product-card-txt {
+  line-height: 20px;
+}
+
+.product-card-head {
+  color: var(--sub-card-heading);
+}
+
+.product-card-sub {
+  color: var(--sub-card-paragraph);
+}
+
+/* PRODUCT SECTION */
+.product-page {
+  min-height: 100vh;
+}
+
+.product-item {
+  line-height: 20px;
+}
+
+.product-item h1 {
+  color: var(--sub-card-heading);
+}
+
+.product-item p {
+  color: var(--sub-card-paragraph);
+}
+
+.product-page-title {
+  font-family: 'Belanosima', sans-serif;
+  font-weight: 700;
+  color: var(--main-headline);
+}
+
+.product-page-title-accent {
+  color: var(--main-btn);
+}
+
+/* CART */
+.cart {
+  min-height: 30vh;
+  background-image: linear-gradient(to bottom, rgba(15, 14, 23, 0.75), rgba(15, 14, 23, 0.75)), url('./assets/jordans.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.cart-section  {
+  min-height: 100vh;
+  background-color: var(--sub-bg);
+}
+
+.cart-text {
+  line-height: 25px;
+}
+
