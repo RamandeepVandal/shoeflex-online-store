@@ -6,24 +6,21 @@ import { Footer } from "./components/Footer";
 // images
 import NikeClip from "../assets/nike-clip.png";
 import DesignClip from "../assets/design-clip.png";
-import JordanImg from '../assets/jordans-item.png';
+import JordanImg from "../assets/jordans-item.png";
 
 export const Homepage = () => {
-
-  const [product, setProduct] = useState(
-    {
-      name: "Jordan 1s - High",
-      color: "1 Colour",
-      price: 160,
-      imgUrl: JordanImg,
-    },
-  );
+  const [product, setProduct] = useState({
+    name: "Jordan 1s - High",
+    color: "1 Colour",
+    price: 160,
+    imgUrl: JordanImg,
+  });
 
   // navigation
   const navigate = useNavigate();
-  const toSneakers = () => navigate('/sneakers');
-  const toDesigner = () => navigate('/designer');
-  const toProduct = (data) => navigate('/product', { state: { data } });
+  const toSneakers = () => navigate("/sneakers");
+  const toDesigner = () => navigate("/designer");
+  const toProduct = (data) => navigate("/product", { state: { data } });
 
   return (
     <section className="homepage">
@@ -37,7 +34,9 @@ export const Homepage = () => {
             <p className="fs-3">
               <span>REINVENTING</span> RUNNING EXPERIENCE.
             </p>
-            <button className="btn hero-btn" onClick={() => toProduct(product)}>Order Now</button>
+            <button className="btn hero-btn" onClick={() => toProduct(product)}>
+              Order Now
+            </button>
           </div>
         </div>
       </div>
@@ -48,15 +47,16 @@ export const Homepage = () => {
           <div className="container">
             <div className="row">
               <div className="col-12 col-md-10 col-lg-4">
-                <div className="card services-card d-flex flex-row align-items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="10em"
-                    viewBox="0 0 640 512"
-                  >
-                    <path d="M112 0C85.5 0 64 21.5 64 48V96H16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 272c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 48c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 240c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 208c8.8 0 16 7.2 16 16s-7.2 16-16 16H64V416c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H112zM544 237.3V256H416V160h50.7L544 237.3zM160 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96zm272 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z" />
-                  </svg>
+                <div className="card services-card d-flex flex-row align-items-center text-center">
                   <div className="ms-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="3em"
+                      className="mb-3"
+                      viewBox="0 0 640 512"
+                    >
+                      <path d="M112 0C85.5 0 64 21.5 64 48V96H16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 272c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 48c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 240c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 208c8.8 0 16 7.2 16 16s-7.2 16-16 16H64V416c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H112zM544 237.3V256H416V160h50.7L544 237.3zM160 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96zm272 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z" />
+                    </svg>
                     <h3>FREE SHIPPING</h3>
                     <p>
                       When you spend $50.00 minimum before taxes on all online
@@ -67,15 +67,16 @@ export const Homepage = () => {
                 </div>
               </div>
               <div className="col-12 col-md-10 col-lg-4">
-                <div className="card services-card d-flex flex-row align-items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="10em"
-                    viewBox="0 0 512 512"
-                  >
-                    <path d="M345 39.1L472.8 168.4c52.4 53 52.4 138.2 0 191.2L360.8 472.9c-9.3 9.4-24.5 9.5-33.9 .2s-9.5-24.5-.2-33.9L438.6 325.9c33.9-34.3 33.9-89.4 0-123.7L310.9 72.9c-9.3-9.4-9.2-24.6 .2-33.9s24.6-9.2 33.9 .2zM0 229.5V80C0 53.5 21.5 32 48 32H197.5c17 0 33.3 6.7 45.3 18.7l168 168c25 25 25 65.5 0 90.5L277.3 442.7c-25 25-65.5 25-90.5 0l-168-168C6.7 262.7 0 246.5 0 229.5zM144 144a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z" />
-                  </svg>
+                <div className="card services-card d-flex flex-row align-items-center text-center">
                   <div className="ms-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="3em"
+                      className="mb-3"
+                      viewBox="0 0 512 512"
+                    >
+                      <path d="M345 39.1L472.8 168.4c52.4 53 52.4 138.2 0 191.2L360.8 472.9c-9.3 9.4-24.5 9.5-33.9 .2s-9.5-24.5-.2-33.9L438.6 325.9c33.9-34.3 33.9-89.4 0-123.7L310.9 72.9c-9.3-9.4-9.2-24.6 .2-33.9s24.6-9.2 33.9 .2zM0 229.5V80C0 53.5 21.5 32 48 32H197.5c17 0 33.3 6.7 45.3 18.7l168 168c25 25 25 65.5 0 90.5L277.3 442.7c-25 25-65.5 25-90.5 0l-168-168C6.7 262.7 0 246.5 0 229.5zM144 144a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z" />
+                    </svg>
                     <h3>PRICE MATCHING</h3>
                     <p>
                       Present a qualifying competitor's ad and we'll gladly
@@ -86,15 +87,16 @@ export const Homepage = () => {
                 </div>
               </div>
               <div className="col-12 col-md-10 col-lg-4">
-                <div className="card services-card d-flex flex-row align-items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="10em"
-                    viewBox="0 0 576 512"
-                  >
-                    <path d="M547.6 103.8L490.3 13.1C485.2 5 476.1 0 466.4 0H109.6C99.9 0 90.8 5 85.7 13.1L28.3 103.8c-29.6 46.8-3.4 111.9 51.9 119.4c4 .5 8.1 .8 12.1 .8c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.2 0 49.3-11.4 65.2-29c16 17.6 39.1 29 65.2 29c4.1 0 8.1-.3 12.1-.8c55.5-7.4 81.8-72.5 52.1-119.4zM499.7 254.9l-.1 0c-5.3 .7-10.7 1.1-16.2 1.1c-12.4 0-24.3-1.9-35.4-5.3V384H128V250.6c-11.2 3.5-23.2 5.4-35.6 5.4c-5.5 0-11-.4-16.3-1.1l-.1 0c-4.1-.6-8.1-1.3-12-2.3V384v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V384 252.6c-4 1-8 1.8-12.3 2.3z" />
-                  </svg>
+                <div className="card services-card d-flex flex-row align-items-center text-center">
                   <div className="ms-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="3em"
+                      className="mb-3"
+                      viewBox="0 0 576 512"
+                    >
+                      <path d="M547.6 103.8L490.3 13.1C485.2 5 476.1 0 466.4 0H109.6C99.9 0 90.8 5 85.7 13.1L28.3 103.8c-29.6 46.8-3.4 111.9 51.9 119.4c4 .5 8.1 .8 12.1 .8c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.2 0 49.3-11.4 65.2-29c16 17.6 39.1 29 65.2 29c4.1 0 8.1-.3 12.1-.8c55.5-7.4 81.8-72.5 52.1-119.4zM499.7 254.9l-.1 0c-5.3 .7-10.7 1.1-16.2 1.1c-12.4 0-24.3-1.9-35.4-5.3V384H128V250.6c-11.2 3.5-23.2 5.4-35.6 5.4c-5.5 0-11-.4-16.3-1.1l-.1 0c-4.1-.6-8.1-1.3-12-2.3V384v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V384 252.6c-4 1-8 1.8-12.3 2.3z" />
+                    </svg>
                     <h3>STORE PICK UP</h3>
                     <p>
                       Buy online, and then pick up your order in store or
@@ -171,9 +173,12 @@ export const Homepage = () => {
                     <div className="p-3 text-center">
                       <h3 className="fs-1">Sneakers</h3>
                       <p className="fs-3">
-                      <span>REINVENTING</span> RUNNING EXPERIENCE
+                        <span>REINVENTING</span> RUNNING EXPERIENCE
                       </p>
-                      <button className="btn hero-btn fs-4" onClick={toSneakers}>
+                      <button
+                        className="btn hero-btn fs-4"
+                        onClick={toSneakers}
+                      >
                         Browse Sneakers
                       </button>
                     </div>
@@ -189,9 +194,12 @@ export const Homepage = () => {
                     <div className="p-3 text-center">
                       <h3 className="fs-1">Designer</h3>
                       <p className="fs-3">
-                      <span>DESIGNED</span> WITH PERFECTION
+                        <span>DESIGNED</span> WITH PERFECTION
                       </p>
-                      <button className="btn hero-btn fs-4" onClick={toDesigner}>
+                      <button
+                        className="btn hero-btn fs-4"
+                        onClick={toDesigner}
+                      >
                         Browse Designer
                       </button>
                     </div>
