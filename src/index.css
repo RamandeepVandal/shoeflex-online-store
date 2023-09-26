@@ -24,7 +24,7 @@
 }
 
 body {
-  background-color: var(--main-bg);
+  background-color: var(--sub-bg);
 }
 
 /* HEADER.JSX */
@@ -87,6 +87,7 @@ body {
 /* SERVICES SECTION */
 .services {
   min-height: 30vh;
+  background-color: var(--sub-bg);
 }
 
 .services-card {
