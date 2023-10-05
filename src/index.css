@@ -24,7 +24,7 @@
 }
 
 body {
-  background-color: var(--main-bg);
+  background-color: var(--sub-bg);
 }
 
 /* HEADER.JSX */
@@ -74,7 +74,7 @@ body {
 
 .hero-btn {
   background-color: var(--main-btn);
-  color: var(--main-btn-txt);
+  color: var(--sub-card-bg);
   font-weight: 600;
   transition: 0.5s ease all;
 }
@@ -87,6 +87,7 @@ body {
 /* SERVICES SECTION */
 .services {
   min-height: 30vh;
+  background-color: var(--sub-bg);
 }
 
 .services-card {
@@ -95,7 +96,7 @@ body {
 }
 
 .services-card h3 {
-  color: var(--main-headline);
+  color: var(--sub-headline);
 }
 
 .services-card a {
@@ -111,7 +112,11 @@ body {
 }
 
 svg {
-  fill: var(--sub-bg);
+  fill: var(--main-bg);
+}
+
+.cart-svg {
+  fill: var(--main-btn);
 }
 
 /* SPONSORS SECTION */
@@ -127,7 +132,7 @@ svg {
 }
 
 .sponsor-card {
-  background-color: var(--main-bg);
+  background-color: var(--sub-bg);
   border: none;
   box-shadow: 0px 2px 4px var(--main-bg);
 }
@@ -147,8 +152,7 @@ svg {
 }
 
 .promo-card {
-  background-color: var(--sub-card-bg);
-  border: none;
+  border: 1px solid var(--sub-card-bg);
 }
 
 .promo h1 {
@@ -159,11 +163,11 @@ svg {
 
 .promo h3 {
   font-weight: 600;
-  color: var(--sub-card-heading);
+  color: var(--sub-card-bg);
 }
 
 .promo p {
-  color: var(--sub-card-paragraph);
+  color: var(--sub-card-bg);
 }
 
 img {
@@ -173,7 +177,7 @@ img {
 .card-img-top {
   width: 100%;
   height: 30vw;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* FOOTER SECTION */
@@ -307,7 +311,7 @@ img {
 }
 
 .cart-section  {
-  min-height: 100vh;
+  min-height: 50vh;
   background-color: var(--sub-bg);
 }
 

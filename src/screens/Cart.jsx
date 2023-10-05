@@ -38,12 +38,19 @@ export const Cart = () => {
       </div>
 
       <div className="cart-section">
-        <div className="d-flex flex-column justify-content-center align-items-center p-5">
-          <CartItems cartData={cartData} filterCart={filterCart} />
-
-          <button className="btn hero-btn btn-lg btn-block mt-5">
-            Checkout
-          </button>
+        <div className="d-flex flex-column justify-content-center align-items-center p-5 m-5">
+          {cartData.length > 0 &&
+          cartData !== undefined &&
+          cartData !== null ? (
+            <div>
+              <CartItems cartData={cartData} filterCart={filterCart} />
+              <button className="btn hero-btn btn-lg btn-block mt-5">
+                Checkout
+              </button>
+            </div>
+          ) : (
+            <p className="fs-1">Nothing to show.</p>
+          )}
         </div>
       </div>
 
