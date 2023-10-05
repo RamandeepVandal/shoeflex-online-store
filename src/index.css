@@ -1,7 +1,7 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;700&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
 
-/*   font-family: 'Belanosima', sans-serif; */
+/* https://www.realtimecolors.com/?colors=050505-fcfcfc-323334-d8d9d9-727474&fonts=Poppins-Poppins */
 
 :root {
   font-family: 'Hind Siliguri', sans-serif;
@@ -21,35 +21,42 @@
   --sub-card-bg-light: #222034;
   --sub-card-heading: #fffffe;
   --sub-card-paragraph: #a7a9be;
+
+  /* NEW COLOR SCHEME */
+  --text: #050505;
+  --background: #fcfcfc;
+  --primary: #323334;
+  --secondary: #d8d9d9;
+  --accent: #727474;
+
 }
 
 body {
-  background-color: var(--sub-bg);
+  background-color: var(--background);
 }
 
 /* HEADER.JSX */
 .nav-brand,
 .nav-links {
   cursor: pointer;
-  color: var(--main-headline);
-
+  color: var(--text);
+  font-weight: 500;
   transition: 0.5s ease all;
 }
 
 .nav-brand {
-  font-family: 'Belanosima', sans-serif;
   font-weight: 700;
 }
 
 .nav-brand:hover,
 .nav-links:hover {
-  color: var(--main-btn);
+  color: var(--accent);
 }
 
 /* HERO SECTIONS */
 .hero {
-  min-height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(15, 14, 23, 0.75), rgba(15, 14, 23, 0.75)), url('./assets/jordans.jpg');
+  min-height: 40vh;
+  background-image: linear-gradient(to bottom, rgba(15, 14, 23, 0.80), rgba(15, 14, 23, 0.80)), url('./assets/jordans.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -57,9 +64,8 @@ body {
 }
 
 .hero-section h1 {
-  font-family: 'Belanosima', sans-serif;
   font-weight: 700;
-  color: var(--main-headline);
+  color: var(--background);
 }
 
 .hero-section span {
@@ -68,26 +74,25 @@ body {
 }
 
 .hero-section p {
-  color: var(--main-paragraph);
+  color: var(--accent);
   font-weight: 700;
 }
 
 .hero-btn {
-  background-color: var(--main-btn);
-  color: var(--sub-card-bg);
+  background-color: var(--secondary);
+  color: var(--text);
   font-weight: 600;
   transition: 0.5s ease all;
 }
 
 .hero-btn:hover {
-  background-color: var(--main-btn-light);
+  background-color: var(--background);
+  color: var(--text);
 }
-
 
 /* SERVICES SECTION */
 .services {
   min-height: 30vh;
-  background-color: var(--sub-bg);
 }
 
 .services-card {
@@ -96,45 +101,51 @@ body {
 }
 
 .services-card h3 {
-  color: var(--sub-headline);
+  color: var(--text);
 }
 
 .services-card a {
-  color: var(--main-btn);
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--text);
+  transition: 0.5 ease all;
 }
 
 .services-card a:hover {
-  color: var(--main-headline);
+  border-bottom: 2px solid var(--text);
 }
 
 .services-card p {
-  color: var(--main-paragraph);
+  color: var(--primary);
 }
 
 svg {
-  fill: var(--main-bg);
+  fill: var(--text);
 }
 
 .cart-svg {
-  fill: var(--main-btn);
+  fill: var(--text);
+  transition: 0.5s ease all;
+}
+
+.cart-svg:hover {
+  fill: var(--accent);
 }
 
 /* SPONSORS SECTION */
 .sponsors {
   min-height: 20vh;
-  background-color: var(--sub-bg);
 }
 
 .sponsors h1 {
-  font-family: 'Belanosima', sans-serif;
+
   font-weight: 700;
-  color: var(--sub-headline);
+  color: var(--text);
 }
 
 .sponsor-card {
-  background-color: var(--sub-bg);
   border: none;
-  box-shadow: 0px 2px 4px var(--main-bg);
+  box-shadow: 1px 1px 4px var(--text);
 }
 
 .featured-logo {
@@ -144,7 +155,6 @@ svg {
 /* PROMOTIONS SECTION */
 .promo {
   min-height: 100vh;
-  background-color: var(--sub-bg);
 }
 
 .promo span {
@@ -156,7 +166,7 @@ svg {
 }
 
 .promo h1 {
-  font-family: 'Belanosima', sans-serif;
+
   font-weight: 700;
   color: var(--main-bg);
 }
@@ -242,7 +252,6 @@ img {
 /* PRODUCTS SECTION */
 .products {
   min-height: 100vh;
-  background-color: var(--sub-bg);
 }
 
 .product-card {
@@ -285,7 +294,7 @@ img {
 }
 
 .product-page-title {
-  font-family: 'Belanosima', sans-serif;
+
   font-weight: 700;
   color: var(--main-headline);
 }
@@ -310,12 +319,10 @@ img {
   background-attachment: fixed;
 }
 
-.cart-section  {
+.cart-section {
   min-height: 50vh;
-  background-color: var(--sub-bg);
 }
 
 .cart-text {
   line-height: 25px;
 }
-
