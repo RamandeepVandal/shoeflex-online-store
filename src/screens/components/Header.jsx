@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -13,21 +13,38 @@ export const Header = () => {
   const routeCart = () => navigate("/cart");
 
   return (
-    <Navbar collapseOnSelect expand="lg" variant="light">
+    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
       <Container>
-        <Navbar.Brand className="nav-brand fs-1" onClick={routeHome}>
+        <Navbar.Brand className="nav-brand fs-5" onClick={routeHome}>
           ShoeFlex
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-responsive" />
         <Navbar.Collapse id="navbar-responsive">
-          <Nav className="ms-auto d-flex align-items-center">
-            <Nav.Link className="me-3 fs-4 nav-links" onClick={routeSneaker}>
+          <Nav className="ms-auto me-auto d-flex align-items-center">
+          <Nav.Link className="me-3 fs-5 nav-links" onClick={routeSneaker}>
+              New & Featured
+            </Nav.Link>
+            <Nav.Link className="me-3 fs-5 nav-links" onClick={routeSneaker}>
               Sneakers
             </Nav.Link>
-            <Nav.Link className="me-3 fs-4 nav-links" onClick={routeDesigner}>
+            <Nav.Link className="me-3 fs-5 nav-links" onClick={routeDesigner}>
               Designer
             </Nav.Link>
-            <Nav.Link className="me-3 fs-4 nav-links" onClick={routeCart}>
+          </Nav>
+          <Nav className="d-flex align-items-center">
+            <Nav.Link className="me-3 fs-5 nav-links">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                className="bi bi-heart cart-svg"
+                viewBox="0 0 16 16"
+              >
+                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+              </svg>
+            </Nav.Link>
+            <Nav.Link className="me-3 fs-5 nav-links" onClick={routeCart}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
