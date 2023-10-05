@@ -24,15 +24,14 @@ export const Homepage = () => {
 
   return (
     <section className="homepage">
+      <Header />
       {/* HERO SECTION */}
       <div className="hero">
-        <Header />
         <div className="d-flex justify-content-center align-items-center">
-          <div className="p-5 m-5 hero-section">
-            <p style={{ color: "var(--main-btn)" }}>Jordan 1s - High</p>
-            <h1 className="display-1">ShoeFlex</h1>
-            <p className="fs-3">
-              <span>REINVENTING</span> RUNNING EXPERIENCE.
+          <div className="p-5 m-5 hero-section text-center">
+            <h1 className="display-4">Jordan 1s - High</h1>
+            <p className="fs-5">
+            Engineered to the Exact Specifications of Championship Athletes
             </p>
             <button className="btn hero-btn" onClick={() => toProduct(product)}>
               Order Now
